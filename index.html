@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calstyle.css">
+    <link rel="stylesheet" href="css\bootstrap.min.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Calculator</li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="line"></div>
+                <div class="leftstate">Student grade System</div>
+            </div>
+            <div class="col-md-6">
+                    <div>
+                        <input type="text" class="inpcls" id="wt" placeholder="WT">
+                    </div>
+                    <div>
+                    </div>
+                    <div>
+                    <input type="text" class="inpcls" id="ang" placeholder="Anguler">
+                        <input type="text" class="inpcls" id="js" placeholder="Javascript">
+                    </div>
+                    <div>
+                        <input type="text" class="inpcls" id="react" placeholder="Reactjs">
+                    </div>  
+                    <div>
+                        <input type="button" name="" value="Show Percentage" class="calubtn" onclick="calcy()">
+                    </div>
+                
+            </div>
+            <div>
+                <p id="showresult"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const calcy = () =>{
+            let wt = document.getElementById('wt').value;
+            let ang = document.getElementById('ang').value;
+            let js = document.getElementById('js').value;
+            let react = document.getElementById('react').value;
+            let grades = "";
+
+
+            let totalGrades = parseFloat(wt) + parseFloat(ang) +parseFloat(js) + parseFloat(react);
+           // console.log(totalGrades);
+            
+           let perce = (totalGrades/400) * 100;
+           //alert(perce);
+
+            
+           if(perce <= 100 && perce >=80){
+               grades = "A";
+           }else if(perce <80 && perce >=60){
+               grades = "B";
+           }else if(perce <60 && perce >=40){
+               grades = "C";
+           }else{
+               grades = "F";
+           }
+
+        if(perce>=40){
+           document.getElementById('showresult').innerHTML = ` Out Of 400 your total marks
+           are ${totalGrades} and percentage is ${perce}%. Your grade is  ${grades}. 
+           <br><center>* You are Pass... *</center> ` 
+        }
+        else{
+            document.getElementById('showresult').innerHTML = ` Out Of 400 your total marks
+            are ${totalGrades} and percentage is ${perce}%. <br><center>* Your grade is  ${grades}. *</center>
+            <br><ceneter>You are fail..</center> ` 
+
+        }
+    }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+

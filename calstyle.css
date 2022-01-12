@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: rgb(243, 180, 129);
+    color: rgb(187, 57, 57);
+    font-size: 25px;
+    height: 42px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+}
+nav ul{
+    list-style-type:none;
+}
+
+.container{
+    height: 42vw;
+    background-color: #90aba6
+    /* background-color:rgba(78, 21, 21, 0.911) */
+    
+}
+.row{
+    margin: 25px auto;
+
+}
+.line{
+    background-color: #4c819c;
+   height : 5px;
+   width: 13vw;
+   transform: translate(5vw, 17vw)rotate(90deg);
+    position: absolute;
+}
+.leftstate{
+    font-family: 'Indie Flower', cursive;
+    color: #2c659e;
+    font-size: 3vw;
+    margin-top: 10vw;
+    margin-left: 15vw;
+    margin-right: 19vw;
+    margin-bottom: 5vw;
+    padding:1px;
+}
+.appdiv{
+   margin-top: 3vw;
+   margin-left: 3vw;
+   
+}
+.inpcls{
+    font-family: 'Shadows Into Light', cursive; 
+    margin-top: 35px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 480;
+    color: black;
+    outline: none;    
+}
+
+.calubtn{
+    font-family: 'Shadows Into Light', cursive;
+    margin-top: 35px;
+    background-color: #4c819c;;
+    font-size: 22px;
+    border-radius: 8px;
+
+}
+#showresult{
+    
+    color: #070707;;
+    font-family: 'The Nautigal', cursive;
+    font-size: 40px;
+    margin-top: 25px;
+    margin-left: 190px;
+    margin-right: 35px;
+}
